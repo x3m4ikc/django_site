@@ -4,30 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b06f4e57-ac37-4736-8606-2d0f91869f19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/lints.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.pylintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mypy.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coolsite/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/coolsite/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coolsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/coolsite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coolsite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/coolsite/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coolsite/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/coolsite/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/tests/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/women/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/women/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b06f4e57-ac37-4736-8606-2d0f91869f19" name="Changes" comment="first commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +20,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,14 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Acer/Desktop/django_site"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Acer/Desktop/django_site&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Acer\Desktop\django_site" />
@@ -78,6 +56,21 @@
       <option name="presentableId" value="Default" />
       <updated>1670231084555</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1670310288287</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1670310288287</updated>
+    </task>
+    <task id="LOCAL-00002" summary="first commit">
+      <created>1670310319414</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670310319414</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,5 +83,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>
