@@ -9,9 +9,9 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .forms import AddPostForm
-from .models import Women
-from .utils import DataMixin
+from .forms import AddPostForm, ContactForm, RegisterUserForm, LoginUserForm
+from .models import Women, Category
+from .utils import DataMixin, menu
 
 
 class WomenHome(DataMixin, ListView): # pylint: disable=too-many-ancestors
