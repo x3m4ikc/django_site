@@ -9,13 +9,16 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .forms import AddPostForm, ContactForm, RegisterUserForm, LoginUserForm
-from .models import Women, Category
-from .utils import DataMixin, menu
+from .forms import AddPostForm
+from .models import Women
+from .utils import DataMixin
 
 
 class WomenHome(DataMixin, ListView): # pylint: disable=too-many-ancestors
     """Home page logic"""
+
+
+class WomenHome(DataMixin, ListView):
     model = Women
     template_name = 'women/index.html'
     context_object_name = 'posts'
@@ -64,6 +67,10 @@ class ContactFormView(DataMixin, FormView):
     def form_valid(self, form):
         print(form.cleaned_data)
         return redirect('home')
+
+
+def pageNotFound(request, exception):
+    return HttpResponseNotFound('<h1>Страница не найдена</h1>')
 
 
 def pageNotFound(request, exception):

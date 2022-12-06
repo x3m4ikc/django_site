@@ -1,6 +1,4 @@
-"""
-ASGI
-"""
+"""ASGI"""
 
 import os
 

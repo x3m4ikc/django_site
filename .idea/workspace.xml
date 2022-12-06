@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b06f4e57-ac37-4736-8606-2d0f91869f19" name="Changes" comment="first commit" />
+=======
+    <list default="true" id="b06f4e57-ac37-4736-8606-2d0f91869f19" name="Changes" comment="" />
+>>>>>>> 31beee8bdc17bff2495882bc238d2a148b368f1f
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,19 +22,26 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+=======
+>>>>>>> 31beee8bdc17bff2495882bc238d2a148b368f1f
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2IULC9SeKd31HNdfbw0apZeZBLp" />
+<<<<<<< HEAD
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+>>>>>>> 31beee8bdc17bff2495882bc238d2a148b368f1f
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
@@ -43,6 +54,16 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Acer\Desktop\django_site" />
     </key>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+>>>>>>> 31beee8bdc17bff2495882bc238d2a148b368f1f
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Acer\Desktop\django_site\women\templates\women" />
     </key>
@@ -56,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1670231084555</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00001" summary="first commit">
       <created>1670310288287</created>
       <option name="number" value="00001" />
@@ -88,4 +110,8 @@
     <MESSAGE value="first commit" />
     <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
+=======
+    <servers />
+  </component>
+>>>>>>> 31beee8bdc17bff2495882bc238d2a148b368f1f
 </project>
