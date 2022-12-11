@@ -11,10 +11,10 @@ from django.views.generic import ListView, DetailView, CreateView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.viewsets import GenericViewSet
 
 from .forms import AddPostForm, ContactForm, RegisterUserForm, LoginUserForm
 from .models import Women, Category
+from .permissions import IsAdminOrReadOnly
 from .serializers import WomenSerializer
 from .utils import DataMixin, menu
 
@@ -137,20 +137,10 @@ def logout_user(request):
     return redirect('login')
 
 
-class WomenViewSet(mixins.CreateModelMixin,
-                   mixins.RetrieveModelMixin,
-                   mixins.UpdateModelMixin,
-                   mixins.ListModelMixin,
-                   GenericViewSet):
-#    queryset = Women.objects.all()
+class WomenViewSet(viewsets.ModelViewSet):
+    queryset = Women.objects.all()
     serializer_class = WomenSerializer
-
-    def get_queryset(self):
-        pk = self.kwargs.get("pk")
-
-        if not pk:
-            return Women.objects.all()
-        return Women.objects.filter(pk=pk)
+    permission_classes = (IsAdminOrReadOnly,)
 
     @action(methods=['get'], detail=False)
     def category(self, request):
