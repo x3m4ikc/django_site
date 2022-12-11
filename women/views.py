@@ -1,5 +1,6 @@
 # pylint: disable=duplicate-code
 """Django classes and funcs for creating views"""
+from rest_framework import generics, viewsets
 from django.contrib.auth import logout, login
 from django.contrib.auth.views import LoginView
 from django.core.paginator import Paginator
@@ -8,14 +9,13 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from .forms import AddPostForm, ContactForm, RegisterUserForm, LoginUserForm
 from .models import Women, Category
+from .serializers import WomenSerializer
 from .utils import DataMixin, menu
-
-
-class WomenHome(DataMixin, ListView): # pylint: disable=too-many-ancestors
-    """Home page logic"""
 
 
 class WomenHome(DataMixin, ListView):
@@ -67,10 +67,6 @@ class ContactFormView(DataMixin, FormView):
     def form_valid(self, form):
         print(form.cleaned_data)
         return redirect('home')
-
-
-def pageNotFound(request, exception):
-    return HttpResponseNotFound('<h1>Страница не найдена</h1>')
 
 
 def pageNotFound(request, exception):
@@ -138,3 +134,22 @@ class LoginUser(DataMixin, LoginView):
 def logout_user(request):
     logout(request)
     return redirect('login')
+
+
+# class WomenAPIList(generics.ListCreateAPIView):
+#     queryset = Women.objects.all()
+#     serializer_class = WomenSerializer
+#
+#
+# class WomenAPIUpdate(generics.UpdateAPIView):
+#     queryset = Women.objects.all()
+#     serializer_class = WomenSerializer
+#
+#
+# class WomenAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
+#     queryset = Women.objects.all()
+#     serializer_class = WomenSerializer
+
+class WomenViewSet(viewsets.ModelViewSet):
+    queryset = Women.objects.all()
+    serializer_class = WomenSerializer

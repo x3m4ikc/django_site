@@ -20,8 +20,6 @@ class Women(models.Model):
     def get_absolute_url(self):
         return reverse('post', kwargs={'post_slug': self.slug})
 
-    class Meta: # pylint: disable=too-few-public-methods
-        """Meta-options for DB model"""
     class Meta:
         verbose_name = 'Известные женщины'
         verbose_name_plural = 'Известные женщины'
