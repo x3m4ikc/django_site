@@ -1,6 +1,6 @@
 # pylint: disable=duplicate-code
 """Django classes and funcs for creating views"""
-from rest_framework import generics, viewsets
+from rest_framework import generics, viewsets, mixins
 from django.contrib.auth import logout, login
 from django.contrib.auth.views import LoginView
 from django.core.paginator import Paginator
@@ -9,8 +9,9 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, FormView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework.views import APIView
+from rest_framework.viewsets import GenericViewSet
 
 from .forms import AddPostForm, ContactForm, RegisterUserForm, LoginUserForm
 from .models import Women, Category
@@ -136,20 +137,22 @@ def logout_user(request):
     return redirect('login')
 
 
-# class WomenAPIList(generics.ListCreateAPIView):
-#     queryset = Women.objects.all()
-#     serializer_class = WomenSerializer
-#
-#
-# class WomenAPIUpdate(generics.UpdateAPIView):
-#     queryset = Women.objects.all()
-#     serializer_class = WomenSerializer
-#
-#
-# class WomenAPIDetailView(generics.RetrieveUpdateDestroyAPIView):
-#     queryset = Women.objects.all()
-#     serializer_class = WomenSerializer
-
-class WomenViewSet(viewsets.ModelViewSet):
-    queryset = Women.objects.all()
+class WomenViewSet(mixins.CreateModelMixin,
+                   mixins.RetrieveModelMixin,
+                   mixins.UpdateModelMixin,
+                   mixins.ListModelMixin,
+                   GenericViewSet):
+#    queryset = Women.objects.all()
     serializer_class = WomenSerializer
+
+    def get_queryset(self):
+        pk = self.kwargs.get("pk")
+
+        if not pk:
+            return Women.objects.all()
+        return Women.objects.filter(pk=pk)
+
+    @action(methods=['get'], detail=False)
+    def category(self, request):
+        cats = Category.objects.all()
+        return Response({'cats': [c.name for c in cats]})
